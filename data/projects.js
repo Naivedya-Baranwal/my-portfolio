@@ -13,28 +13,10 @@ const projects = [
         id: 'Weather-Music-App',
         title: 'Weather Music App',
         type: 'Frontend',
-        description: 'A task management app with CRUD operations...',
+        description: 'A weather music app...',
         image: '/projects/Weather-Music-App.png',
         liveLink: 'https://weather-music-app-naivedya-baranwals-projects.vercel.app/',
         repoLink: 'https://github.com/Naivedya-Baranwal/weather-music-app'
-    },
-     {
-        id: 'Netflix',
-        title: 'Netflix Frontend Replica',
-        type: 'Frontend',
-        description: 'A replica of netflix website...',
-        image: '/projects/Netflix.png',
-        liveLink: 'https://spiffy-kelpie-370452.netlify.app/',
-        repoLink: 'https://github.com/Naivedya-Baranwal/Netflix-Frontend-Replica',
-    },
-      {
-        id: 'To-do-list',
-        title: 'To Do List App',
-        type: 'Frontend',
-        description: 'A task management app with CRUD operations...',
-        image:  '/projects/To-do-list.png',
-        liveLink: 'https://to-do-list-naivedya-baranwals-projects.vercel.app/',
-        repoLink: 'https://github.com/Naivedya-Baranwal/to-do-list'
     },
     {
         id: 'PMS',
@@ -43,6 +25,24 @@ const projects = [
         description: 'A payment management system...',
         image: '/projects/PMS.png',
         repoLink: 'https://github.com/Naivedya-Baranwal/Payment-Management-System'
+    },
+    {
+        id: 'Netflix',
+        title: 'Netflix Frontend Replica',
+        type: 'Frontend',
+        description: 'A replica of netflix website...',
+        image: '/projects/Netflix.png',
+        liveLink: 'https://spiffy-kelpie-370452.netlify.app/',
+        repoLink: 'https://github.com/Naivedya-Baranwal/Netflix-Frontend-Replica',
+    },
+     {
+        id: 'To-do-list',
+        title: 'To Do List App',
+        type: 'Frontend',
+        description: 'A task management app with CRUD operations...',
+        image:  '/projects/To-do-list.png',
+        liveLink: 'https://to-do-list-naivedya-baranwals-projects.vercel.app/',
+        repoLink: 'https://github.com/Naivedya-Baranwal/to-do-list'
     },
     {
         id: 'Aim-trainer',

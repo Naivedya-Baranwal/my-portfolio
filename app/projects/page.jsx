@@ -1,13 +1,36 @@
-import React from 'react'
+'use client'
+import React, { useState } from 'react';
+import FilterBar from '@/app/projects/FilterBar';
 import projects from '@/data/projects';
+import ProjectCard from '@/components/ProjectCard';
 
-const page = () => {
+const Page = () => {
+  const [projectType, setProjectType] = useState("all");
+
+  const filteredProjects = projectType === "all"
+    ? projects
+    : projects.filter((project) => project.type === projectType);
+
   return (
-    <div>
-       <h1 className='text-4xl text-center font-bold pb-2 mb-8'>Projects</h1>
-    
-    </div>
-  )
-}
+    <div className="relative w-full min-h-screen overflow-hidden">
+   
+      <div className='w-full relative px-8 pt-32'>
+        <h1 className='text-4xl text-center font-bold mb-8'>Projects</h1>
 
-export default page
+        <FilterBar setProjectType={setProjectType} />
+
+        <div className='space-y-12 mt-10 mx-46'>
+          {filteredProjects.length > 0 ? (
+            filteredProjects.map((project, index) => (
+              <ProjectCard key={project.id} project={project} index={index} />
+            ))
+          ) : (
+            <p className='text-center text-gray-400'>No projects found for this category.</p>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Page;

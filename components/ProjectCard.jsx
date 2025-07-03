@@ -13,12 +13,12 @@ const ProjectCard = ({project}) => {
                     <h1 className='text-2xl font-bold mb-4'>{title}</h1>
                 <p className='text-md text-gray-300 mb-4'>{description}</p>
                 <div className='flex gap-x-2'>
-                    <a href={liveLink} target="_blank" rel="noreferrer">
-                        <button className='cursor-pointer bg-blue-500 text-white border border-lime-300 px-3 py-1 rounded-lg'>Live Link</button>
-                    </a>
-                    <a href={repoLink} target="_blank" rel="noreferrer">
-                        <button className='cursor-pointer bg-gray-500 text-white border border-lime-300 px-3 py-1 rounded-lg'>Repo Link</button>
-                    </a>
+                   {liveLink &&  <a href={liveLink} target="_blank" rel="noreferrer">
+                        <button className='cursor-pointer border border-lime-300 px-3 py-1 rounded-lg'>Live Link</button>
+                    </a>}
+                   {repoLink && <a href={repoLink} target="_blank" rel="noreferrer">
+                        <button className='cursor-pointer border border-lime-300 px-3 py-1 rounded-lg'>Repo Link</button>
+                    </a>}
                 </div>
                 </div>
              

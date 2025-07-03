@@ -10,7 +10,7 @@ const Projects = () => {
     <div className='text-center'>
       <h1 className='text-4xl text-center font-bold pb-2 mb-8'>Projects</h1>
       <div className=' space-y-12 mx-64'>
-        {firstFour.map((project, index) => (
+        {firstFour.map((project) => (
           <ProjectCard key={project.id} project={project} />
         ))}
       </div>

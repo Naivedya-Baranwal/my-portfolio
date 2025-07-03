@@ -24,9 +24,9 @@ const page = () => {
         <DsaProgress />
       </div>
 
-      {/* <div id="projects"> */}
+      <div id="projects">
         <Projects />
-      {/* </div> */}
+      </div>
 
       <div id="contact">
         <Contact />

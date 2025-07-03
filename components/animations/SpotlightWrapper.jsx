@@ -1,4 +1,4 @@
-"use client";
+"use client"
 import { useRef, useState } from "react";
 
 const SpotlightWrapper = ({ children, spotlightColor = "rgba(0, 229, 255, 0.15)", className = "" }) => {

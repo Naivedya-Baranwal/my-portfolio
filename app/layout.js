@@ -1,7 +1,7 @@
-import SpotlightCard from "@/components/animations/SpotlightWrapper";
 import "./globals.css";
 import { Varela_Round,Outfit } from 'next/font/google'
 import SpotlightWrapper from "@/components/animations/SpotlightWrapper";
+import Navbar from "@/components/Navbar";
 
 
 const varelaRound = Varela_Round({
@@ -23,7 +23,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${varelaRound.className} ${outFit.className}` }>
-       <SpotlightWrapper
+          <Navbar/>
+        <SpotlightWrapper
        className="custom-spotlight-card w-full" spotlightColor="rgba(0, 229, 255, 0.4)"
        >
          {children}
