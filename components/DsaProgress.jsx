@@ -1,0 +1,146 @@
+import React, { useState, useEffect } from 'react';
+import SpotlightCard from './animations/SpotlightCard';
+import CircularProgressCard from './animations/CircularProgressCard';
+import fetchLeetcodeStats from '@/lib/fetchLeetcodeStats';
+import fetchGfgStats from '@/lib/fetchGfgStats';
+import { FaSpinner } from 'react-icons/fa';
+import leetcodeLogo from '@/public/DsaLogos/leetcode.svg';
+import gfgLogo from '@/public/DsaLogos/geeksforgeeks.svg';
+import Image from 'next/image';
+
+const DsaProgress = () => {
+    const [leetcode, setLeetcode] = useState(null);
+    const [gfg, setGfg] = useState(null);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        async function fetchDSAData() {
+            const [lc, gf] = await Promise.all([
+                fetchLeetcodeStats(),
+                fetchGfgStats()
+            ]);
+            setLeetcode(lc);
+            setGfg(gf);
+            setLoading(false);
+        }
+        fetchDSAData();
+    }, []);
+
+    const renderBar = (label, value, total, colorFrom, colorTo) => {
+        const percent = (value / total) * 100;
+        const gradient = `linear-gradient(to right, ${colorFrom}, ${colorTo})`;
+
+        return (
+            <div className="mb-3">
+                <div className="flex justify-between text-sm mb-1">
+                    <span>{label}</span>
+                    <span>{value}</span>
+                </div>
+                <div className="w-full h-2 bg-gray-700 rounded-md overflow-hidden">
+                    <div
+                        className="h-full rounded-md"
+                        style={{
+                            width: `${percent}%`,
+                            background: gradient
+                        }}
+                    />
+                </div>
+            </div>
+        );
+    };
+
+    return (
+        <div className='pb-5 pt-3  px-10 text-center'>
+            <h1 className='text-3xl font-bold pb-2 mb-8'>DSA PROGRESS</h1>
+            <div className='flex flex-col gap-y-3'>
+                <SpotlightCard className="custom-spotlight-card transition transform-3d hover:scale-104 duration-300 px-12 mx-46" spotlightColor="rgba(150, 29, 255, 0.6)">
+                    <h2 className="text-xl font-semibold mb-2">Problem Solving Journey</h2>
+                    <p className="text-md text-gray-300">
+                        I've solved over 800+ problems on platforms like LeetCode and GFG. This consistent practice has enhanced my problem-solving
+                        skills and analytical thinking required to approach real-world software engineering challenges.
+                    </p>
+                </SpotlightCard>
+
+                <div className='flex mx-36 gap-x-5'>
+                    {/* LeetCode Card */}
+                    <SpotlightCard className="px-15 custom-spotlight-card w-full transition transform-3d hover:scale-104 duration-300" spotlightColor="rgba(230, 209, 25, 0.8)">
+                        <div className='flex justify-between items-center cursor-pointer' onClick={() => window.open("https://leetcode.com/u/naivedyab198/", "_blank")}>
+                            <h2 className="text-lg font-semibold flex items-center gap-2">
+                                <Image src={leetcodeLogo} alt="LeetCode" className="w-6 h-6" />
+                                LeetCode
+                            </h2>
+                        </div>
+
+                        {loading ? (
+                            <div className="flex justify-center items-center h-32">
+                                <FaSpinner className="animate-spin text-2xl" />
+                            </div>
+                        ) : leetcode && (
+                            <>
+                                <div className="flex justify-between mb-6">
+                                    <div className='flex flex-col justify-center items-start'>
+                                        <div>Global Rank : {leetcode.ranking}</div>
+                                        <div>Total Solved : {leetcode.totalSolved}</div>
+                                    </div>
+
+                                    <CircularProgressCard
+                                        solved={leetcode.totalSolved}
+                                        easySolved={leetcode.easySolved}
+                                        mediumSolved={leetcode.mediumSolved}
+                                        hardSolved={leetcode.hardSolved}
+                                        total={leetcode.totalQuestions}
+                                    />
+                                </div>
+                                <div>
+                                    {renderBar("Easy", leetcode.easySolved, leetcode.totalSolved, "#4ade80", "#22c55e")}
+                                    {renderBar("Medium", leetcode.mediumSolved, leetcode.totalSolved, "#fb923c", "#facc15")}
+                                    {renderBar("Hard", leetcode.hardSolved, leetcode.totalSolved, "#ef4444", "#dc2626")}
+                                </div>
+                            </>
+                        )}
+                    </SpotlightCard>
+
+                    {/* GFG Card */}
+                    <SpotlightCard className="px-15 custom-spotlight-card w-full transition transform-3d hover:scale-104 duration-300" spotlightColor="rgba(100, 255, 150, 0.8)">
+                        <div className='flex justify-between items-center cursor-pointer' onClick={() => window.open("https://www.geeksforgeeks.org/user/naivedya/", "_blank")}>
+                            <h2 className="text-lg font-semibold flex items-center gap-2">
+                                <Image src={gfgLogo} alt="GFG" className="w-6 h-6" />
+                                GFG
+                            </h2>
+                        </div>
+
+                        {loading ? (
+                            <div className="flex justify-center items-center h-32">
+                                <FaSpinner className="animate-spin text-2xl" />
+                            </div>
+                        ) : gfg && (
+                            <>
+                                <div className="flex justify-between mb-6">
+                                    <div className='flex flex-col justify-center items-start'>
+                                        <div>Institute Rank : 10</div>
+                                        <div>Total Solved : {gfg.totalProblemsSolved}</div>
+                                    </div>
+
+                                    <CircularProgressCard
+                                        solved={gfg.totalProblemsSolved}
+                                        easySolved={gfg.Easy + gfg.Basic}
+                                        mediumSolved={gfg.Medium}
+                                        hardSolved={gfg.Hard}
+                                        total={3504}
+                                    />
+                                </div>
+                                <div>
+                                    {renderBar("Easy", gfg.Easy + gfg.Basic, gfg.totalProblemsSolved, "#4ade80", "#22c55e")}
+                                    {renderBar("Medium", gfg.Medium, gfg.totalProblemsSolved, "#fb923c", "#facc15")}
+                                    {renderBar("Hard", gfg.Hard, gfg.totalProblemsSolved, "#ef4444", "#dc2626")}
+                                </div>
+                            </>
+                        )}
+                    </SpotlightCard>
+                </div>
+            </div>
+        </div>
+    );
+};
+
+export default DsaProgress;
