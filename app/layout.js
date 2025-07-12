@@ -2,7 +2,7 @@ import "./globals.css";
 import { Varela_Round,Outfit } from 'next/font/google'
 import SpotlightWrapper from "@/components/animations/SpotlightWrapper";
 import Navbar from "@/components/Navbar";
-
+import Footer from "@/components/Footer";
 
 const varelaRound = Varela_Round({
   weight: '400',
@@ -22,14 +22,19 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${varelaRound.className} ${outFit.className}` }>
-          <Navbar/>
+      <body className={`${varelaRound.className} ${outFit.className} flex flex-col min-h-screen justify-between ` }>
+        
         <SpotlightWrapper
-       className="custom-spotlight-card w-full" spotlightColor="rgba(0, 229, 255, 0.4)"
-       >
+       className="custom-spotlight-card w-full" spotlightColor="rgba(130, 29, 255, 0.01)"
+       > <Navbar/>
+       {/* rgba(0, 229, 255, 0.25)*/}
+     
+        {/* 0, 229, 255, 0.35 */}
+        {/* 100, 255, 150, 0.5 */}
          {children}
+         <Footer/>
        </SpotlightWrapper>
-         
+        
       </body>
     </html>
   );

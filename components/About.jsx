@@ -1,27 +1,65 @@
 import React from 'react';
 import SpotlightCard from './animations/SpotlightCard';
 import TiltedCard from './animations/TitleCard';
+import {motion} from 'framer-motion';
+import BlurText from '@/components/animations/BlurText'
 
 const About = () => {
   return (
-    <div>
-      <h1 className="text-3xl font-bold text-center ">👋 About Me</h1>
+    <div className='mt-8'>
+     <BlurText
+  text="👋 About Me"
+  delay={10}
+  animateBy="words"
+  direction="top"
+  className="text-3xl font-bold m-auto w-fit mb-4"
+/>
+     
       <div className='flex px-20 pt-10 pb-25  gap-x-1.5 justify-between'>
         <SpotlightCard className="custom-spotlight-card w-1/4 text-xl text-center transform transition duration-300 hover:scale-104" spotlightColor="rgba(100, 255, 150, 0.5)">
-  <h1 className="text-2xl font-semibold mb-4 text-center">Get to Know Me</h1>
-<div className="space-y-3 text-lg text-justify leading-relaxed">
+ 
+<motion.div
+initial={{
+  opacity:0,
+  y:-150,
+}}
+whileInView={{
+  opacity:1,
+  y:0,
+}}
+ transition={{
+  duration:0.6,
+  ease:'easeOut',
+ }}
+ viewport={{ once: true, amount: 0.6 }}
+ className="space-y-3 text-lg text-justify leading-relaxed">
+   <h1 className="text-2xl font-semibold mb-4 text-center">✨ Get to Know Me</h1>
   <p>
     I'm <span className="font-medium text-blue-600">Naivedya</span>, a Computer Science undergraduate at <strong>NIT Mizoram</strong> (2022–26). I'm passionate about web development, AI, and building impactful full-stack applications.
   </p>
 <p>
   I love solving DSA problems and bringing ideas to life through full-stack web development. Exploring clean UI design, optimizing backend logic, and learning new technologies keeps me excited and constantly improving.
 </p>
-</div>
+</motion.div>
 
         </SpotlightCard>
         <SpotlightCard className="custom-spotlight-card w-3/4" spotlightColor="rgba(0, 29, 255, 0.4)">
-          <div >
-            <h2 className="text-xl font-bold mb-8">🎓 Education</h2>
+          <motion.div
+          initial={{
+            opacity:0,
+            y:-150,
+          }}
+          whileInView={{
+            opacity:1,
+            y:0,
+          }}
+          transition={{
+            duration:0.6,
+            ease:'easeOut',
+          }}
+          viewport={{ once: true, amount: 0.6 }}
+          >
+            <h2 className="text-2xl font-bold mb-8">🎓 Education</h2>
             <div className='flex gap-x-2'>
              <TiltedCard
                 imageSrc="/assets/NIT_MZ.jpg"
@@ -86,14 +124,14 @@ const About = () => {
                   <div className="p-4 bg-white/80 rounded-md shadow-md backdrop-blur-sm text-black w-[280px]">
                     <h3 className="text-lg font-bold">Secondary Education</h3>
                     <p className="text-sm mt-1">Sterling School, Babatpur, Varanasi (CBSE)</p>
-                    <p className="text-sm">Percentage: 91.2</p>
+                    <p className="text-sm">Percentage: 91.2%</p>
                     <p className="text-sm">2018 – 2019</p>
                   </div>
                 }
               />
 
             </div>
-          </div>
+          </motion.div>
         </SpotlightCard>
       </div>
 

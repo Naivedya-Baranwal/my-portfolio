@@ -6,12 +6,15 @@ import Skills from '@/components/Skills';
 import Projects from '@/components/Projects';
 import Contact from '@/components/Contact';
 import DsaProgress from '@/components/DsaProgress';
+import Experience from '@/components/Experience';
 
 const page = () => {
   return (
     <div>
-      <Hero />
-
+      
+      <div id="home">
+        <Hero />
+      </div>
       <div id="about">
         <About />
       </div>
@@ -26,6 +29,10 @@ const page = () => {
 
       <div id="projects">
         <Projects />
+      </div>
+
+      <div id="experience">
+        <Experience />
       </div>
 
       <div id="contact">
