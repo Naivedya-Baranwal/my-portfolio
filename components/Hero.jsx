@@ -38,7 +38,7 @@ const Hero = () => {
         </div>
         <div className='w-1/3 m-auto mt-15 lg:mt-0'>
           <Image
-            src="/assets/profile.png"
+            src="/assets/profile.jpeg"
             alt="My Profile Picture"
             width={350}
             height={300}
