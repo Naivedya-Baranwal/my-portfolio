@@ -32,13 +32,13 @@ const SkillItem = ({ icon, label, percent = 0 }) => {
 
       <div className="w-full">
         <div className="flex justify-between items-center text-sm mb-1">
-          <span className="font-semibold text-white">{label}</span>
-          <span className="text-xs px-2 py-[2px] rounded-full bg-gray-800 text-gray-300 border border-gray-600">
+          <span className="font-semibold text-black dark:text-white">{label}</span>
+          <span className="text-xs px-2 py-[2px] rounded-full bg-transparent text-black dark:text-gray-300 border border-gray-600">
             {level}
           </span>
         </div>
 
-        <div className="w-full h-2 bg-gray-700 rounded-md overflow-hidden">
+        <div className="w-full h-2 bg-transparent rounded-md overflow-hidden">
           <div
             className={`h-full bg-gradient-to-r ${gradientClass}`}
             style={{ width: `${percent}%` }}

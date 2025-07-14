@@ -14,15 +14,15 @@ const Page = () => {
 
   return (
     <div className="relative w-full min-h-screen overflow-hidden">
-      <div className='w-full relative px-8 pt-32'>
-        <h1 className='text-4xl text-center font-bold mb-8'>💼 Projects</h1>
+      <div className='w-full relative px-4 sm:px-6 md:px-8 pt-24 md:pt-32'>
+        <h1 className='text-3xl md:text-4xl text-center font-bold mb-6 md:mb-8'>💼 Projects</h1>
 
         <FilterBar setProjectType={(type) => {
           setProjectType(type);
           setHasFiltered(true);
         }} />
 
-        <div className='space-y-12 mt-10 mx-46'>
+        <div className='space-y-8 sm:space-y-12 mt-8 sm:mt-10 mx-0 sm:mx-4 md:mx-8 lg:mx-16 xl:mx-46'>
           {filteredProjects.length > 0 ? (
             filteredProjects.map((project, index) => (
               <ProjectCard

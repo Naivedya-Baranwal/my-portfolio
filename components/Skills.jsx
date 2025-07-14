@@ -14,8 +14,8 @@ const Skills = () => {
         direction="top"
         className="text-4xl font-bold m-auto w-fit pb-2 mb-8"
       />
-      <div className='flex gap-x-4 mx-4'>
-        <SpotlightCard className="custom-spotlight-card w-1/4 transition transform hover:scale-104 duration-300" spotlightColor="rgba(130, 29, 255, 0.3)">
+      <div className='flex flex-col md:flex-row gap-y-6 md:gap-y-0 md:gap-x-4 mx-4'>
+        <SpotlightCard className="custom-spotlight-card w-full md:w-1/4 transition transform hover:scale-104 duration-300" spotlightColor="rgba(130, 29, 255, 0.3)">
           <motion.div
             initial={{
               opacity: 0,
@@ -39,10 +39,10 @@ const Skills = () => {
             <SkillItem icon="/skillsLogos/language/c++.svg" label="CPP" percent={40} />
           </motion.div>
         </SpotlightCard>
-        <SpotlightCard className="custom-spotlight-card w-1/2 transition transform-3d hover:scale-104 duration-300" spotlightColor="rgba(130, 29, 255, 0.3)">
+        <SpotlightCard className="custom-spotlight-card w-full md:w-1/2 transition transform-3d hover:scale-104 duration-300" spotlightColor="rgba(130, 29, 255, 0.3)">
           <div>
             <h1 className='text-2xl font-bold mb-4'>🌐 Web Development</h1>
-            <div className='flex justify-around mt-4'>
+            <div className='flex flex-col md:flex-row justify-around mt-4 lg:items-center'>
               <motion.div
                 initial={{
                   opacity: 0,
@@ -57,9 +57,9 @@ const Skills = () => {
                   ease: 'easeOut'
                 }}
                 viewport={{ once: true, amount: 0.5 }}
-                className='w-2/5'
+                className='w-full lg:w-2/5'
               >
-                <h1 className='text-xl font-bold mb-3'>🖥️ Frontend</h1>
+                <h1 className='text-xl font-bold mb-3 mt-5 md:mt-0'>🖥️ Frontend</h1>
                 <SkillItem icon="/skillsLogos/WebDev/html.svg" label="HTML" percent={90} />
                 <SkillItem icon="/skillsLogos/WebDev/css.svg" label="CSS" percent={90} />
                 <SkillItem icon="/skillsLogos/WebDev/javascript.svg" label="Javascript" percent={70} />
@@ -83,9 +83,11 @@ const Skills = () => {
                   ease: 'easeOut'
                 }}
                 viewport={{ once: true, amount: 0.5 }}
-                className='w-2/5'
+                className='w-full lg:w-2/5'
+
               >
-                <h1 className='text-xl font-bold mb-3'>⚙️ Backend</h1>
+                <h1 className='text-xl font-bold mb-3 mt-5 md:mt-0'>⚙️ Backend</h1>
+
                 <SkillItem icon="/skillsLogos/WebDev/node.svg" label="Node.js" percent={65} />
                 <SkillItem icon="/skillsLogos/WebDev/express.svg" label="Express.js" percent={65} />
                 <SkillItem icon="/skillsLogos/WebDev/mongodb.svg" label="MongoDB" percent={70} />
@@ -97,7 +99,7 @@ const Skills = () => {
             </div>
           </div>
         </SpotlightCard>
-        <SpotlightCard className="custom-spotlight-card w-1/4 transition transform-3d hover:scale-104 duration-300" spotlightColor="rgba(130, 29, 255, 0.3)">
+        <SpotlightCard className="custom-spotlight-card w-full md:w-1/4  transition transform-3d hover:scale-104 duration-300" spotlightColor="rgba(130, 29, 255, 0.3)">
           <motion.div
             initial={{
               opacity: 0,

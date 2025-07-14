@@ -13,7 +13,7 @@ const Experience = () => {
         direction="top"
         className="text-4xl font-bold m-auto w-fit mb-12"
       />
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-10 w-4/5 m-auto justify-items-center">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-10 w-[80%] md:w-4/5 m-auto justify-items-center">
         {experiences.map((exp, index) => {
           const isLastOdd = experiences.length % 2 !== 0 && index === experiences.length - 1;
           const direction = isLastOdd

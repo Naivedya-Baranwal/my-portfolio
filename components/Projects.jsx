@@ -16,13 +16,13 @@ const Projects = () => {
         direction="top"
         className="text-4xl font-bold m-auto w-fit mb-12"
       />
-      <div className=' space-y-12 mx-64'>
+      <div className=' space-y-12 mx-4 lg:mx-64'>
         {firstFour.map((project) => (
           <ProjectCard key={project.id} project={project} />
         ))}
       </div>
       <Link href="/projects">
-        <button className='cursor-pointer border transition transform hover:scale-110 duration-300 border-blue-700 px-8 py-2 my-10 rounded-2xl m-4 text-xl'>View All</button>
+        <button className='cursor-pointer border transition transform hover:scale-110 duration-300 border-purple-600 px-8 py-2 my-10 rounded-2xl m-4 text-xl'>View All</button>
       </Link>
     </div>
   )

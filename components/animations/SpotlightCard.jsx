@@ -40,7 +40,7 @@ const SpotlightCard = ({ children, className = "", spotlightColor = "rgba(255, 2
       onBlur={handleBlur}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      className={`relative rounded-3xl border border-neutral-800 bg-neutral-900 shadow-xl  overflow-hidden p-8 ${className}`}
+      className={`relative rounded-3xl dark:border dark:border-neutral-800 dark:bg-transparent bg-white shadow-xl  overflow-hidden p-8 ${className}`}
     >
       <div
         className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500 ease-in-out"

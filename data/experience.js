@@ -11,11 +11,12 @@ const experiences = [
     duration: 'Jan 2025 – Feb 2025',
     location: 'Remote',
     description: [
-      'Completed 6-week internship in Cyber Security under IBM SkillsBuild & AICTE.',
+      'Completed 6-week internship in Cyber Security under IBM & AICTE.',
       'Worked on steganography: hiding data in images to understand encryption.',
       'Explored cybersecurity concepts and tools through hands-on tasks.',
     ],
     skills: ['Cybersecurity', 'Steganography'],
+     github: 'https://github.com/Naivedya-Baranwal/Image_Stego',
   },
   {
     id: 2,

@@ -18,28 +18,28 @@ const directionVariants = {
 
 const ExperienceCard = ({ experience, direction }) => {
   return (
-    <SpotlightCard className={`${direction==='center' ? 'left-1/2' : ''}`} spotlightColor="rgba(150, 209, 255, 1.6)">
+    <SpotlightCard className={`w-full ${direction==='center' ? 'md:left-1/2' : ''}`} spotlightColor="rgba(150, 209, 255, 0.15)">
     <motion.div
       initial="hidden"
       whileInView="visible"
       viewport={{ once: false, amount: 0.5 }}
       variants={directionVariants[direction]}
       transition={{ duration: 0.6, ease: 'easeOut' }}
-    className='bg-[#0a0a0a] relative text-white p-6 rounded-xl shadow-lg w-full max-w-xl '
+    className='dark:bg-[#3434348a] bg-white  dark:text-white text-black p-6 rounded-xl shadow-lg w-full max-w-xl '
     >
-      <div className="flex items-center gap-4 mb-4">
-        <div className=''>
+      <div className="flex flex-col md:flex-row md:items-center gap-4 mb-4">
+        <div className='flex justify-center'>
   <img src={experience.logo.src} alt={experience.company} className="w-15 h-15 rounded-lg object-cover" />
      
         </div>
-         <div className="text-left">
+         <div className="text-center md:text-left">
           <h3 className="text-lg font-semibold">{experience.title}</h3>
-          <p className="text-sm text-gray-400">{experience.company}</p>
-          <p className="text-sm text-gray-400">{experience.duration} · {experience.location}</p>
+          <p className="text-sm text-black dark:text-white">{experience.company}</p>
+          <p className="text-sm text-black dark:text-white">{experience.duration} · {experience.location}</p>
         </div>
       </div>
 
-      <ul className="list-disc text-start list-inside text-sm space-y-1 mb-3">
+      <ul className="list-none justify-text text-start list-inside text-sm space-y-1 mb-3">
         {experience.description.map((point, i) => (
           <li key={i}>{point}</li>
         ))}
@@ -49,7 +49,7 @@ const ExperienceCard = ({ experience, direction }) => {
         {experience.skills.map((skill, i) => (
           <span
             key={i}
-            className="border border-white/30 text-sm px-3 py-1 rounded-full text-gray-200 hover:bg-white/10 transition"
+            className="border border-black dark:border-white/30 text-sm px-3 py-1 rounded-full text-black dark:text-white hover:bg-white/10 transition"
           >
             {skill}
           </span>
