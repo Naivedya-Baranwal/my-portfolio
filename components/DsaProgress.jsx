@@ -62,7 +62,7 @@ const DsaProgress = () => {
             />
 
             <div className='flex flex-col gap-y-3'>
-                <SpotlightCard className="custom-spotlight-card transition transform-3d hover:scale-104 duration-300  m-auto  w-full md:w-7/10" spotlightColor="rgba(150, 29, 255, 0.6)">
+                <SpotlightCard className=" custom-spotlight-card transition transform-3d hover:scale-104 duration-300  m-auto  w-full md:w-7/10" spotlightColor="rgba(150, 29, 255, 0.6)">
                     <motion.div
                         initial={{
                             opacity: 0,
@@ -141,7 +141,7 @@ const DsaProgress = () => {
                     </SpotlightCard>
 
                     {/* GFG Card */}
-                    <SpotlightCard className="px-6 md:px-15 custom-spotlight-card w-full transition transform-3d hover:scale-104 duration-300" spotlightColor="rgba(100, 255, 150, 0.8)">
+                    <SpotlightCard className=" px-6 md:px-15 custom-spotlight-card w-full transition transform-3d hover:scale-104 duration-300" spotlightColor="rgba(100, 255, 150, 0.8)">
                         <motion.div
                             initial={{
                                 opacity: 0,

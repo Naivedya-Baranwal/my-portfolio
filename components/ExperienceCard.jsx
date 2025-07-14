@@ -18,7 +18,7 @@ const directionVariants = {
 
 const ExperienceCard = ({ experience, direction }) => {
   return (
-    <SpotlightCard className={`w-full ${direction==='center' ? 'md:left-1/2' : ''}`} spotlightColor="rgba(150, 209, 255, 0.15)">
+    <SpotlightCard className={`border-none w-full ${direction==='center' ? 'md:left-1/2' : ''}`} spotlightColor="rgba(150, 209, 255, 0.15)">
     <motion.div
       initial="hidden"
       whileInView="visible"
