@@ -30,7 +30,8 @@ const Contact = () => {
         }}
         className='flex justify-center pb-3 px-4 md:px-0'>
         <SpotlightCard spotlightColor="rgba(20, 29, 255, 0.3)" className="border-none w-full md:w-auto">
-          <form className='gap-y-4 flex flex-col justify-center text-lg items-start w-full ' action="https://formsubmit.co/naivedyab198@gmail.com" method="POST">
+          <form className='gap-y-4 flex flex-col justify-center text-lg items-start w-full ' action="https://formsubmit.co/d1befd67dfdccd8226a0ab8101781a66" method="POST">
+            <input type="hidden" name="_next" value="https://my-portfolio-eight-mu-51.vercel.app/" />
             <input name="name" required className='border relative  border-purple-600 w-full md:w-lg px-2 py-4 rounded-2xl' type="text" placeholder='Name' />
             <input name="email" required className='border relative border-purple-600 w-full md:w-lg px-2 py-4 rounded-2xl' type="text" placeholder='Email' />
             <textarea required name="message" id="" cols="30" rows="5" className='border md:w-lg relative border-purple-600 rounded-2xl w-full px-2 py-4' placeholder='Message'></textarea>
