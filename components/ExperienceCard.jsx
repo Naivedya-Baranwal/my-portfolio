@@ -39,7 +39,7 @@ const ExperienceCard = ({ experience, direction }) => {
         </div>
       </div>
 
-      <ul className="list-none justify-text text-start list-inside text-sm space-y-1 mb-3">
+      <ul className="list-disc list-outside justify-text text-start text-sm space-y-1 ml-3 lg:ml-3.25 mb-3">
         {experience.description.map((point, i) => (
           <li key={i}>{point}</li>
         ))}
