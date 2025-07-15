@@ -50,6 +50,15 @@ const projects = [
         repoLink: 'https://github.com/Naivedya-Baranwal/to-do-list'
     },
       {
+        id: 'Cybersecurity-Stego',
+        title: 'Image Steganography Project',
+        type: 'cybersecurity',
+        description:
+            'A cybersecurity project exploring data hiding techniques via steganography. Developed image encoding and decoding tools to secure sensitive messages.',
+        image: '/projects/Stego.jpg',
+        repoLink: 'https://github.com/Naivedya-Baranwal/Image_Stego'
+    },
+      {
         id: 'AI-Chatbot',
         title: 'AI Health Chatbot',
         type: 'ai/ml',
@@ -60,22 +69,14 @@ const projects = [
     },
     {
         id: 'Aim-trainer',
-        title: 'Aim Trainer App',
+        title: 'Aim Trainer Game',
         type: 'ai/ml',
         description:
             'A concentration training game built with JavaScript to improve mouse accuracy and reaction time. Includes score tracking and timed challenges.',
         image: '/projects/Aimtrainer.png',
         repoLink: 'https://github.com/Naivedya-Baranwal/Aim-Trainer-Game'
     },
-    {
-        id: 'Cybersecurity-Stego',
-        title: 'Image Steganography Project',
-        type: 'cybersecurity',
-        description:
-            'A cybersecurity project exploring data hiding techniques via steganography. Developed image encoding and decoding tools to secure sensitive messages.',
-        image: '/projects/Stego.jpg',
-        repoLink: 'https://github.com/Naivedya-Baranwal/Image_Stego'
-    }
+  
 ];
 
 export default projects;
