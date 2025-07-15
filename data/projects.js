@@ -64,7 +64,7 @@ const projects = [
         type: 'ai/ml',
         description:
             'A concentration training game built with JavaScript to improve mouse accuracy and reaction time. Includes score tracking and timed challenges.',
-        image: '/projects/Aimtrainer1.png',
+        image: '/projects/Aimtrainer.png',
         repoLink: 'https://github.com/Naivedya-Baranwal/Aim-Trainer-Game'
     },
     {
