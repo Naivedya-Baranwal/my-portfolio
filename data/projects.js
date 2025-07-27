@@ -29,6 +29,16 @@ const projects = [
         image: '/projects/PMS.png',
         repoLink: 'https://github.com/Naivedya-Baranwal/Payment-Management-System'
     },
+       {
+        id: 'AI-Chatbot',
+        title: 'AI Health Chatbot',
+        type: 'ai/ml',
+        description:
+            'A Streamlit-based chatbot powered by DistilGPT-2 for answering healthcare queries. Uses rule-based NLP and Hugging Face Transformers.',
+        image: '/projects/AiChatbot.png',
+        liveLink:'https://naivedya-baranwal-ai-powered-health-chatbot-app-pwvsnz.streamlit.app/',
+        repoLink: 'https://github.com/Naivedya-Baranwal/AI-Powered-health-Chatbot',
+    },
     {
         id: 'Netflix',
         title: 'Netflix Frontend Replica',
@@ -57,15 +67,6 @@ const projects = [
             'A cybersecurity project exploring data hiding techniques via steganography. Developed image encoding and decoding tools to secure sensitive messages.',
         image: '/projects/Stego.jpg',
         repoLink: 'https://github.com/Naivedya-Baranwal/Image_Stego'
-    },
-      {
-        id: 'AI-Chatbot',
-        title: 'AI Health Chatbot',
-        type: 'ai/ml',
-        description:
-            'A Streamlit-based chatbot powered by DistilGPT-2 for answering healthcare queries. Uses rule-based NLP and Hugging Face Transformers.',
-        image: '/projects/AiChatbot.png',
-        repoLink: 'https://github.com/Naivedya-Baranwal/AI-Powered-health-Chatbot'
     },
     {
         id: 'Aim-trainer',
