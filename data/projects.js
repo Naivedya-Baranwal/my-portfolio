@@ -27,7 +27,7 @@ const projects = [
         description:
             'A full-stack platform for managing student payments and records. Features secure user authentication, dashboard insights, and streamlined transaction tracking.',
         image: '/projects/PMS.png',
-        repoLink: 'https://github.com/Naivedya-Baranwal/Payment-Management-System'
+        repoLink: 'https://github.com/Naivedya-Baranwal/payment_management_system'
     },
        {
         id: 'AI-Chatbot',
