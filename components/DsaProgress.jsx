@@ -172,7 +172,7 @@ const DsaProgress = () => {
                                 <>
                                     <div className="flex flex-col md:flex-row justify-between mb-6">
                                         <div className='flex flex-col justify-center items-center md:items-start mb-4 md:mb-0'>
-                                            <div>Institute Rank : 10</div>
+                                            <div>Institute Rank : 7</div>
                                             <div>Total Solved : {gfg.totalProblemsSolved}</div>
                                         </div>
 
