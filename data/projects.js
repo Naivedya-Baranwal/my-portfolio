@@ -2,10 +2,10 @@
 const projects = [
     {
         id: 'Food-Delivery-App',
-        title: 'Food Delivery App',
+        title: 'Naivedyam Now',
         type: 'Full Stack',
         description:
-            'A MERN stack food delivery platform with user login, admin dashboard, cart management, real-time order tracking, and Stripe/COD payments. Designed for small restaurants with role-based access and MongoDB Atlas integration.',
+       'A robust MERN stack food delivery platform featuring user/customer login, a powerful admin dashboard, a dedicated delivery agent panel, cart management, real-time order tracking with live maps, WebSocket-driven notifications, OTP-protected delivery verification, and secure Stripe/COD payments. Designed for small restaurants with granular role-based access, JWT authentication, and scalable MongoDB Atlas/Render deployment.',
         image: '/projects/Food-Delivery-App.png',
         liveLink: 'https://food-delivery-app-frontend-rzxm.onrender.com/',
         repoLink: 'https://github.com/Naivedya-Baranwal/food-delivery-app'

@@ -11,16 +11,32 @@ const experiences = [
     duration: 'Jan 2025 – Feb 2025',
     location: 'Remote',
     description: [
-      'Completed 6-week internship in Cyber Security under IBM & AICTE.',
-      'Worked on steganography: hiding data in images to understand encryption.',
-      'Explored cybersecurity concepts and tools through hands-on tasks.',
+  '   Developed a steganography security system embedding AES-256-GCM encrypted text within images using LSB encoding, achieving flawless data retrieval with zero visual distortion across 50+ test images.',
+
+'Engineered a Node.js + Express backend, seamlessly integrated with a Python CLI (OpenCV) for advanced pixel-level steganographic operations.',
+
+'Implemented PBKDF2-based key derivation, strengthening security.'
     ],
-    skills: ['Cybersecurity', 'Steganography'],
-     github: 'https://github.com/Naivedya-Baranwal/Image_Stego',
+    skills: [ 'Steganography', 'Node.js', 'Express', 'Python', 'OpenCV'],
+     github: 'https://github.com/Naivedya-Baranwal/ImageEncryption',
   },
   {
     id: 2,
-    title: 'AI Intern – TechSaksham Program',
+   title: 'Winter Intern',
+    company: 'IIT Patna',
+    logo: iitpLogo,
+    duration: 'Nov 2024 – Jan 2025',
+    location: 'Remote',
+    description: [
+      'Contributed to CultSportQA:a culturally contextual QA dataset for regional sports, under Dr. Sriparna Saha’s mentorship.',
+      'Benchmarked 5+ LLMs and VLMs (ChatGPT, GPT-4, Gemini, BLIP-2) on 2,000+ QA pairs, achieving a 15% accuracy increase through Few-Shot and Chain-of-Thought prompting strategies.',
+      'Developed an automated evaluation pipeline (Exact Match, F1 scoring) using Hugging Face and OpenAI APIs, increasing benchmarking efficiency by 20%.',
+    ],
+    skills: ['Gemini API', 'Excel', 'Prompt Engineering'],
+  },
+  {
+    id: 3,
+     title: 'AI Intern – TechSaksham Program',
     company: 'AICTE',
     logo: aicteLogo,
     duration: 'Jan 2025 – Feb 2025',
@@ -32,20 +48,6 @@ const experiences = [
     ],
     skills: ['Python', 'NLP', 'Streamlit'],
     github: 'https://github.com/Naivedya-Baranwal/AI-Powered-health-Chatbot',
-  },
-  {
-    id: 3,
-    title: 'Winter Intern',
-    company: 'IIT Patna',
-    logo: iitpLogo,
-    duration: 'Nov 2024 – Jan 2025',
-    location: 'Remote',
-    description: [
-      'Contributed to CultSportQA: evaluating bias in LLMs and VLMs.',
-      'Generated culturally contextual QA datasets using Gemini API.',
-      'Automated image generation and multilingual translations via Excel scripting.',
-    ],
-    skills: ['Gemini API', 'Excel', 'Prompt Engineering'],
   },
 ]
 
